@@ -1,3 +1,6 @@
+
+
+
 let teams = [
   {
     name:"Titans",
@@ -132,14 +135,27 @@ const cardBuilder = (teamsArray) => {
   }
   PTD(teamString,'teamCards');
 };
+
+
+const btnEvents = (e) => {
+  btnClicked = e.target.id;
+  const selectedTeams = [];
+  for(let i = 0;i < teams.length; i++){
+      const team = teams[i];
+      if(team.btnClicked === btnClicked){
+        selectedTeams.push(team)
+      }
+  }
+if( btnClicked === 'home'){
+  cardBuilder(teams);
+} else {
+  cardBuilder(selectedTeams);
+  }
+};
+
+
+
+document.getElementById('afc').addEventListener('click', btnEvents);
+document.getElementById('nfc').addEventListener('click',btnEvents);
+document.getElementById('home').addEventListener('click',btnEvents);
 cardBuilder(teams);
-
-
-
-
-
-
-
-  document.getElementById('afc').addEventListener('click',conBtn);
-  document.getElementById('nfc').addEventListener('click',conBtn);
-  document.getElementById('home').addEventListener('click',conBtn);
