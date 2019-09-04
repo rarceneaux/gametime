@@ -142,11 +142,11 @@ const btnEvents = (e) => {
   const selectedTeams = [];
   for(let i = 0;i < teams.length; i++){
       const team = teams[i];
-      if(team.btnClicked === btnClicked){
+      if(team.conference === btnClicked){
         selectedTeams.push(team)
       }
   }
-if( btnClicked === 'home'){
+if( btnClicked === 'HOME'){
   cardBuilder(teams);
 } else {
   cardBuilder(selectedTeams);
@@ -155,6 +155,6 @@ if( btnClicked === 'home'){
 // ?????
 
 
-document.getElementById('afc').addEventListener('click', btnEvents);
-document.getElementById('nfc').addEventListener('click',btnEvents);
-document.getElementById('home').addEventListener('click',btnEvents);
+document.getElementById('AFC').addEventListener('click', btnEvents);
+document.getElementById('NFC').addEventListener('click',btnEvents);
+document.getElementById('HOME').addEventListener('click',btnEvents);
