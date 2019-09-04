@@ -135,7 +135,7 @@ const cardBuilder = (teamsArray) => {
   }
   PTD(teamString,'teamCards');
 };
-// cardBuilder(teams)
+cardBuilder(teams)
 
 const btnEvents = (e) => {
   btnClicked = e.target.id;
@@ -158,4 +158,3 @@ if( btnClicked === 'home'){
 document.getElementById('afc').addEventListener('click', btnEvents);
 document.getElementById('nfc').addEventListener('click',btnEvents);
 document.getElementById('home').addEventListener('click',btnEvents);
-cardBuilder(teams);
