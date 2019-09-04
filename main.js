@@ -135,7 +135,7 @@ const cardBuilder = (teamsArray) => {
   }
   PTD(teamString,'teamCards');
 };
-
+// cardBuilder(teams)
 
 const btnEvents = (e) => {
   btnClicked = e.target.id;
