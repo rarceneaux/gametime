@@ -152,7 +152,7 @@ if( btnClicked === 'home'){
   cardBuilder(selectedTeams);
   }
 };
-
+// ?????
 
 
 document.getElementById('afc').addEventListener('click', btnEvents);
